@@ -39,3 +39,9 @@ To configure CICD pipeline on heroku
 HEROKU EMAIL - umaretiya@gmail.com
 HEROKU API - 04420eaa-c5d2-4bd9-bf8b-93f70c2d1ad3
 HEROKU APP NAME - flask-ml01
+
+### Buld docker image
+```
+docker build -t <image name>:<tag name> .
+```
+> Note: imagename fro docker must be lowercase
