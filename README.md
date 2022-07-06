@@ -19,4 +19,18 @@ conda activate venv
 ```
 pip install -r requirements.txt
 ```
-
+```
+git add .
+```
+for commit a changes
+```
+git commit -m "first commit"
+```
+To send changes/version on git
+```
+git push origin main
+```
+To check remote url
+```
+git remote -v
+```
