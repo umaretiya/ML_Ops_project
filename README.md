@@ -34,3 +34,8 @@ To check remote url
 ```
 git remote -v
 ```
+To configure CICD pipeline on heroku
+
+HEROKU EMAIL - umaretiya@gmail.com
+HEROKU API - 04420eaa-c5d2-4bd9-bf8b-93f70c2d1ad3
+HEROKU APP NAME - flask-ml01
