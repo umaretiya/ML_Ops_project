@@ -45,3 +45,22 @@ HEROKU APP NAME - flask-ml01
 docker build -t <image name>:<tag name> .
 ```
 > Note: imagename fro docker must be lowercase
+
+To list docker image
+```
+docker images
+```
+Run docker image
+```
+docker run -p 5000:5000 -e PORT=5000 6ce17fe3d920
+```
+
+To check runnig container in docker
+```
+docker ps
+```
+
+to stop docker container
+```
+docker stop <container_id> ad6cabc7a281
+```
