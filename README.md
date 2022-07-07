@@ -8,6 +8,11 @@ This is end to end machine learning projects with automation
 3. [VS Code](https://code.visualstudio.com/download)
 4. [GIT Cli](https://git-scm.com/downloads)
 
+### Learning from sklearn
+[gitgub sklearn](https://github.com/scikit-learn/scikit-learn/tree/main/sklearn)
+[scikit-learn](https://github.com/scikit-learn)
+[tensorflow](https://github.com/tensorflow/tensorflow)
+[keras github](https://github.com/keras-team/keras)
 ### creating conda environments
 ```
 conda create -p venv python == 3.7 -y
@@ -67,4 +72,7 @@ docker stop <container_id> ad6cabc7a281
 Creating yaml file
 ```
 .github/workflows/main.yaml
+```
+```
+python setup.py install
 ```

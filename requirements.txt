@@ -1,2 +1,7 @@
 Flask
 gunicorn
+sklearn
+pandas
+numpy
+matplotlib
+seaborn
