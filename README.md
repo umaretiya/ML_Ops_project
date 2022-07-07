@@ -76,3 +76,16 @@ Creating yaml file
 ```
 python setup.py install
 ```
+install ipykernel
+```
+pip install ipykernel
+```
+### setup a Machine Learning Frmaeworks
+
+setting a direcotries in frameworks:
+- main(housing)
+    - component
+    - config
+    - logger
+    - exception
+    - pipeline

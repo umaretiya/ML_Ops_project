@@ -1,5 +1,4 @@
 import logging
-import logger 
 from datetime import datetime
 import os
 
