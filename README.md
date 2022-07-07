@@ -64,3 +64,7 @@ to stop docker container
 ```
 docker stop <container_id> ad6cabc7a281
 ```
+Creating yaml file
+```
+.github/workflows/main.yaml
+```
