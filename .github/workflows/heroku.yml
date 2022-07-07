@@ -35,7 +35,7 @@ jobs:
             # API key with the deploy role
             api-key: ${{ secrets.HEROKU_API_KEY }}
             # Directory to upload
-            path: # optional, default is .
+            path: ./
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
