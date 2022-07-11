@@ -15,6 +15,8 @@ This is end to end machine learning projects with automation
 [keras github](https://github.com/keras-team/keras)
 ### creating conda environments
 ```
+umaretiya/ML_classification_Project
+
 conda create -p venv python == 3.7 -y
 ```
 OR
@@ -30,6 +32,12 @@ git add .
 for commit a changes
 ```
 git commit -m "first commit"
+```1
+Next command for git
+```
+git branch -M main
+git remote add origin <Repo link>
+git push -u origin main
 ```
 To send changes/version on git
 ```
@@ -85,7 +93,10 @@ pip install ipykernel
 setting a direcotries in frameworks:
 - main(housing)
     - component
+        -
     - config
     - logger
     - exception
     - pipeline
+        - pipeline.py
+    - entity
