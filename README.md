@@ -90,13 +90,35 @@ pip install ipykernel
 ```
 ### setup a Machine Learning Frmaeworks
 
-setting a direcotries in frameworks:
+### Project End to End ML framworks with Flask:
+
+- setup.py: setup configuration module
+- app.py: flask app configuration and main moduel
+- Dockerfile : cofiguration for image/container creation
+- requirements.txt: All required packages-libs for projects
+- templates: html files
+- static:
+    -css
+    -js
+    -images
+- config
+    -config.yaml
+    -schema.yaml
 - main(housing)
     - component
-        -
+        -data_ingestion
+        -data_transformation
+        -data_validation
+        -model_trainer
+        -model_evaluation
+        -model_pusher
     - config
     - logger
+        -logging: for collects a log
     - exception
+        -Exceptions: for handling as an exceptions
     - pipeline
-        - pipeline.py
+        - pipeline
     - entity
+        -config_entity: for Entity connfigurations
+

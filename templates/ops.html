@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block body_block %}
+
+
+<h2>Projects Structures</h2>
+<h3>Sturcture w.r.t : Module Design <a type="link" href="/">Home</a> </h3>
+
+
+<ul>
+    <li>Model Nmae: {{ context['Model'] }}</li>
+    <li>Data Name: {{ context["Data"]}} </li>
+    <li>Data Sector: {{ context["sector"]}} </li>
+</ul>
+<p>
+    <li>- setup.py: setup configuration module </li> <br>
+    <li>- app.py: flask app configuration and main moduel </li><br>
+    <li>- Dockerfile : cofiguration for image/container creation </li><br>
+    <li>- requirements.txt: All required packages-libs for projects </li><br>
+    <li>- templates: html files </li><br>
+    <li>- static:</li><br>
+<ol>
+    <li>-css</li>
+    <li> -js</li>
+    <li> -images</li>
+</ol>
+- config
+<li>-config.yaml</li>
+<li>-schema.yaml</li>
+- main(housing)
+<ul>
+    - component
+    <li>-data_ingestion</li>
+    <li>-data_transformation</li>
+    <li>-data_validation</li>
+    <li>-model_trainer</li>
+    <li>-model_evaluation</li>
+    <li>-model_pusher</li>
+</ul>
+- config <br>
+- logger
+<li> -logging: for collects a log</li>
+- exception<br>
+<li>-Exceptions: for handling as an exceptions</li>
+- pipeline<br>
+<li>- pipeline</li>
+- entity<br>
+<li>-config_entity: for Entity connfigurations</li>
+</p>
+
+{% endblock body_block %}

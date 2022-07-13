@@ -16,5 +16,10 @@ def index():
         logging.info("main app function is running")
     return render_template("index.html")
 
+@app.route("/ops")
+def project_strating():
+    data={"Model":"Classifcaitons","Data":"Housing","sector":"realestate"}
+    return render_template("ops.html", context=data)
+
 if __name__ == '__main__':
     app.run(debug=True)
