@@ -122,3 +122,9 @@ pip install ipykernel
     - entity
         -config_entity: for Entity connfigurations
 
+### example
+
+[Example Porjects](https://drive.google.com/file/d/1mdWOTgWAzm8yEhWO93atcmk4YYXvTwx8/view)
+[mode](https://drive.google.com/u/0/uc?id=1mdWOTgWAzm8yEhWO93atcmk4YYXvTwx8&export=download)
+
+
