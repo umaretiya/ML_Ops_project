@@ -17,6 +17,7 @@ This is end to end machine learning projects with automation
 ```
 umaretiya/ML_classification_Project
 
+conda create -n wafer3 python=3.10
 conda create -p venv python == 3.7 -y
 ```
 OR
