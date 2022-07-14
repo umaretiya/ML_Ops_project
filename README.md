@@ -105,6 +105,7 @@ pip install ipykernel
 - config
     -config.yaml
     -schema.yaml
+    -model.yaml
 - main(housing)
     - component
         -data_ingestion
@@ -114,6 +115,10 @@ pip install ipykernel
         -model_evaluation
         -model_pusher
     - config
+        -configuration( data : [ngestin,validation,transformation],
+                        model: [trainer,evaluation,pusher])
+    - constant
+        -constants(__init__)
     - logger
         -logging: for collects a log
     - exception
@@ -122,6 +127,8 @@ pip install ipykernel
         - pipeline
     - entity
         -config_entity: for Entity connfigurations
+    - util
+        -util
 
 ### example
 
