@@ -1,6 +1,13 @@
 from cmath import log
 import flask
-import sys,os,json
+import sys,os,json,base64
+import pandas as pd,numpy as np, matplotlib.pyplot as plt
+
+from sklearn.svm import SVC
+from sklearn.metrics import accuracy_score,confusion_matrix
+from sklearn.model_selection import train_test_split
+from io import BytesIO
+import seaborn as sns
 
 from housing.logger import logging
 from flask import Flask,render_template,send_file,abort,request
@@ -29,16 +36,38 @@ MEDIAN_HOUSING_VALUE_KEY = "median_house_value"
 
 
 app = Flask(__name__)
+app.secret_key = "regression project seret key"
 
 @app.route('/',methods=['GET','POST'])
 def index():
     try:
-        raise Exception("We are testin custom exception")
+        #collecting a data from local dir
+        dataset = "D:\\iNeuron\internship_projects\\Credit Card Default Prediction"
+        file_name = "UCI_Credit_Card.csv"
+        cwd = os.getcwd()
+        file_path = os.path.join(cwd,dataset,file_name)
+        # Loding data sets and cleaning ,eda etc
+        df = pd.read_csv(file_path)
+        df.drop(labels=['ID'],axis=1, inplace=True)
+        # Feature selection, lables and traget variables
+        X = df.drop(labels=['default.payment.next.month'], axis=1)
+        y = df['default.payment.next.month']
+        # Train test spliting
+        X_train,X_test,y_train,y_test = train_test_split(X,y,test_size=0.3, random_state=42)
+        # Model initalizing
+        svc = SVC()
+        svc.fit(X_train,y_train)
+        y_pred = svc.predict(X_test)
+        # model accuracy testing
+        acc = accuracy_score(y_pred,y_test)
+        cm = confusion_matrix(y_pred,y_test)
+        data = {"accuracy":acc,"confusion_metrics":cm}
+        logging.info("Model accuracy test function")
     except Exception as e:
         housing = HousingException(e,sys)
         logging.info(housing.error_message)
         logging.info("main app function is running")
-    return render_template("index.html")
+    return render_template("index.html",data=data)
 
 @app.route("/ops")
 def project_strating():
